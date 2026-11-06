@@ -19,8 +19,8 @@ def redirect_to_new_domain():
     if parsed_url.netloc == FROM_DOMAIN:
         # Replace the old domain with the new domain
         new_netloc = TO_DOMAIN
-        #new_url = urlunparse(parsed_url._replace(netloc=new_netloc))
-        new_url = urlunparse(scheme=parsed_url.scheme, netloc=new_netloc, path='')
+        new_url = urlunparse(parsed_url._replace(netloc=new_netloc, path=''))
+
 
         # Redirect to the new URL
         return redirect(new_url, code=301)  # 301 Moved Permanently
