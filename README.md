@@ -1,0 +1,1 @@
+redirect from motips.pythonanywhere.com to mweinb.github.io/after-tax-tips
